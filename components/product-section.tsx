@@ -76,12 +76,20 @@ const ProductSection = () => {
       <div className='container mx-auto px-4'>
         {/* benefits */}
         <div className='flex flex-col items-center justify-center'>
-          <h5 className='text-accent mb-2 text-sm font-semibold tracking-widest uppercase'>
+          <motion.h5
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className='text-accent mb-2 text-sm font-semibold tracking-widest uppercase'>
             Benefits
-          </h5>
-          <h1 className='text-primary font-heading mb-10 text-center text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl'>
+          </motion.h5>
+          <motion.h1
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className='text-primary font-heading mb-10 text-center text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl'>
             Keunggulan Produk Kami
-          </h1>
+          </motion.h1>
           <div className='relative z-30 grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5'>
             {benefits.map((card, index) => (
               <motion.div
@@ -103,30 +111,52 @@ const ProductSection = () => {
         {/* product */}
         <div id='product' className='flex flex-col items-center gap-12 pt-24 lg:flex-row lg:gap-16'>
           <div className='w-full lg:w-2/5'>
-            <h5 className='text-accent mb-2 text-center text-sm font-semibold tracking-widest uppercase sm:text-left'>
+            <motion.h5
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className='text-accent mb-2 text-center text-sm font-semibold tracking-widest uppercase sm:text-left'>
               Produk Kami
-            </h5>
-            <h1 className='text-primary font-heading mb-6 text-center text-3xl leading-tight font-bold sm:text-left sm:text-4xl lg:text-5xl'>
+            </motion.h5>
+            <motion.h1
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='text-primary font-heading mb-6 text-center text-3xl leading-tight font-bold sm:text-left sm:text-4xl lg:text-5xl'>
               Kroisan yang Akan Anda Cintai
-            </h1>
+            </motion.h1>
             <ul className='mb-8 space-y-4'>
               {features.map((feature, index) => (
-                <li key={index} className='flex items-center gap-3'>
+                <motion.li
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 * index }}
+                  key={index}
+                  className='flex items-center gap-3'>
                   <CircleCheck className='text-accent h-6 w-6 shrink-0' />
                   <span className='text-primary text-base font-medium'>{feature}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
-            <Button
-              size={'lg'}
-              className='bg-primary active:ring-primary h-12 rounded-full px-8 text-white active:ring-2 active:ring-offset-2'>
-              Pesan Sekarang
-              <FaArrowRight className='ml-2' />
-            </Button>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}>
+              <Button
+                size={'lg'}
+                className='bg-primary active:ring-primary h-12 rounded-full px-8 text-white active:ring-2 active:ring-offset-2'>
+                Pesan Sekarang
+                <FaArrowRight className='ml-2' />
+              </Button>
+            </motion.div>
           </div>
 
           {/* image grid */}
-          <div className='w-full lg:flex-1'>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className='w-full lg:flex-1'>
             <div className='grid grid-cols-2 gap-4 lg:h-137.5 lg:grid-cols-3 lg:grid-rows-2'>
               {products.map((product, index) => (
                 <div
@@ -142,7 +172,7 @@ const ProductSection = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
