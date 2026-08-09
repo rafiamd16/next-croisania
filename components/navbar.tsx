@@ -9,8 +9,9 @@ import { Button } from '@/components/ui/button'
 
 const navItems = [
   { href: '#home', label: 'Beranda' },
-  { href: '#about', label: 'Tentang Kami' },
+  { href: '#benefit', label: 'Benefits' },
   { href: '#product', label: 'Produk' },
+  { href: '#about', label: 'Tentang Kami' },
   { href: '#testimoni', label: 'Testimoni' },
   { href: '#faq', label: 'FAQ' },
   { href: '#contact', label: 'Kontak' },
@@ -41,7 +42,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`absolute top-0 right-0 left-0 z-50 w-full bg-white ${isScroll ? 'fixed bg-white/50 shadow-sm backdrop-blur-sm' : ''}`}>
+        className={`absolute top-0 right-0 left-0 z-50 w-full bg-white ${isScroll ? 'fixed bg-white/50 shadow-sm backdrop-blur-md' : ''}`}>
         <div className='container mx-auto px-4'>
           <div className='flex items-center justify-between'>
             <a
@@ -58,7 +59,7 @@ const Navbar = () => {
 
             {/* Large Navbar */}
             <nav className='hidden lg:block'>
-              <ul className='gap-6 lg:flex'>
+              <ul className='gap-4 lg:flex xl:gap-6'>
                 {navItems.map((item, i) => (
                   <li key={i}>
                     <a

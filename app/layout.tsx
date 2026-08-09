@@ -3,6 +3,7 @@ import { Poppins, Geist_Mono, Lora } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/navbar'
 import { cn } from '@/lib/utils'
+import Footer from '@/components/footer'
 
 const loraHeading = Lora({ subsets: ['latin'], variable: '--font-heading', display: 'swap' })
 
@@ -20,8 +21,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Bakery',
-  description: 'Bakery',
+  title: 'Croisania',
+  description: 'Freshly Baked Everyday',
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
@@ -38,9 +39,10 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         loraHeading.variable,
         'scroll-smooth',
       )}>
-      <body className='flex min-h-375 flex-col'>
+      <body className='flex flex-col overflow-x-hidden'>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )

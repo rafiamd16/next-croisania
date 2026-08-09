@@ -15,7 +15,7 @@ const HeroSection = () => {
   return (
     <section
       id='home'
-      className={`relative bg-[url(/assets/hero.webp)] bg-cover bg-center pt-32 pb-64 md:pt-42`}>
+      className={`relative min-h-screen bg-[url(/assets/hero.webp)] bg-cover bg-center pt-32 pb-16 lg:pb-80`}>
       {/* overlay */}
       <div className='absolute top-0 right-0 left-0 z-10 block h-full w-full bg-neutral-50/30 sm:hidden'></div>
       <div className='relative z-20 container mx-auto px-4'>
@@ -36,8 +36,8 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}>
             <h1 className='font-heading w-full text-4xl leading-tight font-bold text-shadow-2xs sm:text-5xl lg:w-1/2 xl:text-7xl'>
               <span>Kroisan Premium,</span>
-              <span className='text-accent block'>Renyah di Luar,</span>
-              <span className='text-accent block'>Lembut di Dalam.</span>
+              <span className='text-primary block'>Renyah di Luar,</span>
+              <span className='text-primary block'>Lembut di Dalam.</span>
             </h1>
           </motion.div>
           <motion.div
