@@ -1,41 +1,12 @@
 'use client'
 
-import { FaArrowRight, FaBan, FaLeaf } from 'react-icons/fa'
+import { FaArrowRight } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-import { GiButter } from 'react-icons/gi'
-import { MdOutdoorGrill } from 'react-icons/md'
-import { FaTruckFast } from 'react-icons/fa6'
 import Image from 'next/image'
-import { CircleCheck } from 'lucide-react'
+import { ArrowRight, CircleCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-
-const benefits = [
-  {
-    icon: <FaLeaf size={50} className='text-primary' />,
-    title: 'Bahan Premium',
-    description: 'Hanya menggunakan bahan berkualitas terbaik',
-  },
-  {
-    icon: <GiButter size={50} className='text-primary' />,
-    title: 'Mentega Asli',
-    description: 'Menggunakan mentega asli, bukan margarin',
-  },
-  {
-    icon: <MdOutdoorGrill size={50} className='text-primary' />,
-    title: 'Dipanggang Fresh',
-    description: 'Dibuat setiap hari untuk rasa terbaik',
-  },
-  {
-    icon: <FaBan size={50} className='text-primary' />,
-    title: 'Tanpa Pengawet',
-    description: 'Aman dikonsumsi seluruh keluarga',
-  },
-  {
-    icon: <FaTruckFast size={50} className='text-primary' />,
-    title: 'Pengiriman Cepat',
-    description: 'Dikirim fresh ke rumah atau kantor anda',
-  },
-]
+import special from '@/public/assets/products/special.webp'
+import { IoShieldCheckmark } from 'react-icons/io5'
 
 const products = [
   {
@@ -70,59 +41,31 @@ const features = [
   'Tersedia dalam berbagai varian rasa',
 ]
 
+const features2 = [
+  'Isi 6 pcs kroisan premium (bebas varian)',
+  'Freshly baked setiap hari',
+  'Gratis packing eksklusif',
+  'Pengiriman cepat dan aman',
+]
+
 const ProductSection = () => {
   return (
-    <section id='benefit' className='py-24'>
+    <section id='product' className='bg-cream py-26'>
       <div className='container mx-auto px-4'>
-        {/* benefits */}
-        <div className='flex flex-col items-center justify-center'>
-          <motion.h5
-            initial={{ opacity: 0, y: -100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className='text-accent mb-2 text-sm font-semibold tracking-widest uppercase'>
-            Benefits
-          </motion.h5>
-          <motion.h1
-            initial={{ opacity: 0, y: -100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className='text-primary font-heading mb-10 text-center text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl'>
-            Keunggulan Produk Kami
-          </motion.h1>
-          <div className='relative z-30 grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5'>
-            {benefits.map((card, index) => (
-              <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 * index }}
-                key={index}
-                className={`${index === 4 ? 'col-span-1 md:col-span-2 xl:col-span-1' : ''}`}>
-                <div className='flex min-h-55 flex-col items-center justify-center gap-4 rounded-xl border bg-white px-4 py-8 shadow-lg transition duration-500 ease-in-out hover:-translate-y-1 hover:shadow-[10px_10px_5px_rgba(0,0,0,0.8)]'>
-                  {card.icon}
-                  <h3 className='text-center font-semibold'>{card.title}</h3>
-                  <p className='text-center text-sm'>{card.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* product */}
-        <div id='product' className='flex flex-col items-center gap-12 pt-24 lg:flex-row lg:gap-16'>
+        <div className='flex flex-col items-center gap-12 lg:flex-row lg:gap-16'>
           <div className='w-full lg:w-2/5'>
             <motion.h5
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className='text-accent mb-2 text-center text-sm font-semibold tracking-widest uppercase sm:text-left'>
+              className='text-accent mb-2 text-sm font-semibold tracking-widest uppercase'>
               Produk Kami
             </motion.h5>
             <motion.h1
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className='text-primary font-heading mb-6 text-center text-3xl leading-tight font-bold sm:text-left sm:text-4xl lg:text-5xl'>
+              className='text-primary font-heading mb-6 text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl'>
               Kroisan yang Akan Anda Cintai
             </motion.h1>
             <ul className='mb-8 space-y-4'>
@@ -173,6 +116,98 @@ const ProductSection = () => {
               ))}
             </div>
           </motion.div>
+        </div>
+
+        {/* Penawaran */}
+        <div className='mt-24 flex flex-col-reverse gap-4 lg:flex-row'>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className='w-full lg:w-1/2'>
+            <Image
+              src={special.src}
+              width={600}
+              height={600}
+              className='mx-auto max-w-full object-cover lg:mx-0'
+              alt='image'
+            />
+          </motion.div>
+
+          <div className='w-full lg:w-1/2'>
+            <motion.h5
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='text-accent mb-2 text-sm font-semibold tracking-widest uppercase'>
+              Penawaran Special
+            </motion.h5>
+            <motion.h1
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className='text-primary font-heading mb-3 text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl'>
+              Paket Hemat Kroisan
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className='mb-5 text-sm'>
+              Nikmati kroisan premium dengan harga lebih hemat.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className='mb-5 flex max-w-md items-center justify-center gap-4 rounded-xl bg-white p-4'>
+              <span className='text-primary text-xs font-semibold line-through sm:text-sm'>
+                Rp. 75.000
+              </span>
+              <h1 className='font-heading text-lg font-bold sm:text-4xl'>Rp. 50.000</h1>
+              <span className='bg-cream text-accent rounded-full px-2 py-1 text-xs font-semibold uppercase sm:text-sm'>
+                hemat 27%
+              </span>
+            </motion.div>
+
+            <ul className='mb-8 space-y-4'>
+              {features2.map((feature, index) => (
+                <motion.li
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 * index }}
+                  key={index}
+                  className='flex items-center gap-3'>
+                  <CircleCheck className='text-accent h-6 w-6 shrink-0' />
+                  <span className='text-primary text-base font-medium'>{feature}</span>
+                </motion.li>
+              ))}
+            </ul>
+
+            <div className='flex flex-col gap-5 sm:flex-row'>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}>
+                <Button size={'lg'} className='h-13 w-max px-8 shadow-md lg:w-auto'>
+                  Pesan Sekarang
+                  <ArrowRight />
+                </Button>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                className='flex items-center gap-4'>
+                <IoShieldCheckmark size={46} className='text-accent' />
+                <span className='text-sm'>
+                  <span className='text-primary text-base'>Garansi Uang Kembali</span> <br />
+                  jika tidak puas
+                </span>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

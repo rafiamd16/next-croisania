@@ -15,9 +15,9 @@ const HeroSection = () => {
   return (
     <section
       id='home'
-      className={`relative min-h-screen bg-[url(/assets/hero.webp)] bg-cover bg-center pt-32 pb-16 lg:pb-80`}>
+      className={`relative min-h-screen bg-[url(/assets/hero.webp)] bg-cover bg-center pt-36 pb-16 sm:pt-44 lg:pb-80`}>
       {/* overlay */}
-      <div className='absolute top-0 right-0 left-0 z-10 block h-full w-full bg-neutral-50/30 sm:hidden'></div>
+      <div className='absolute top-0 right-0 left-0 z-10 block h-full w-full bg-neutral-50/25 sm:hidden'></div>
       <div className='relative z-20 container mx-auto px-4'>
         <div className='w-full'>
           <motion.div
@@ -54,7 +54,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}>
-              <Button size={'lg'} className='h-11 w-max px-5 shadow-md lg:w-auto'>
+              <Button size={'lg'} className='h-13 w-max px-8 shadow-md lg:w-auto'>
                 Pesan Sekarang
                 <ArrowRight />
               </Button>

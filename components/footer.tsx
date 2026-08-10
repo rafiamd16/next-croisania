@@ -9,7 +9,7 @@ const Footer = () => {
       <div className='bg-cream w-full py-10'>
         <div className='container mx-auto'>
           <div className='flex w-full flex-wrap'>
-            <div className='mb-10 w-full px-4 lg:w-1/4'>
+            <div className='mb-12 w-full px-4 lg:w-1/4'>
               <div className='mb-5 flex items-center gap-2'>
                 <Image src={logo} alt='logo' width={36} height={36} className='size-9' />
                 <div className='flex flex-col'>
@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className='mb-10 w-full px-4 lg:w-1/4'>
+            <div className='mb-12 w-full px-4 lg:w-1/4'>
               <div className='flex flex-col justify-center gap-5'>
                 <h3 className='text-primary font-bold'>Menu</h3>
                 <a
@@ -67,7 +67,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className='mb-10 w-full px-4 lg:w-1/4'>
+            <div className='mb-12 w-full px-4 lg:w-1/4'>
               <div className='flex flex-col justify-center gap-5'>
                 <h3 className='text-primary font-bold'>Info</h3>
                 <a
@@ -92,7 +92,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className='mb-10 w-full px-4 lg:w-1/4'>
+            <div className='mb-12 w-full px-4 lg:w-1/4'>
               <h3 className='text-primary mb-5 text-center font-bold sm:text-left'>Follow Kami</h3>
               <div className='mb-8 flex items-center justify-center gap-4 sm:justify-start'>
                 <a
