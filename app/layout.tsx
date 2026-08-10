@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/navbar'
 import { cn } from '@/lib/utils'
 import Footer from '@/components/footer'
+import { TooltipProvider } from '@/components/ui/tooltip'
 
 const loraHeading = Lora({ subsets: ['latin'], variable: '--font-heading', display: 'swap' })
 
@@ -41,7 +42,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       )}>
       <body className='flex flex-col overflow-x-hidden'>
         <Navbar />
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
         <Footer />
       </body>
     </html>

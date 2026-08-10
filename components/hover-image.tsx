@@ -1,15 +1,13 @@
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 
-const HoverImage = ({ quote, children }: { quote: string; children: React.ReactNode }) => {
+const HoverImage = ({ message, children }: { message: string; children: React.ReactNode }) => {
   return (
-    <HoverCard>
-      <HoverCardTrigger delay={10} closeDelay={100}>
-        {children}
-      </HoverCardTrigger>
-      <HoverCardContent side='top' className='flex w-64 flex-col gap-0.5'>
-        <div className='text-center'>&quot;{quote}&quot;</div>
-      </HoverCardContent>
-    </HoverCard>
+    <Tooltip>
+      <TooltipTrigger>{children}</TooltipTrigger>
+      <TooltipContent>
+        <p>&quot;{message}&quot;</p>
+      </TooltipContent>
+    </Tooltip>
   )
 }
 

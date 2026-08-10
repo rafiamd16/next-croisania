@@ -81,19 +81,19 @@ const TestimoniSection = () => {
                 </div>
 
                 {/* image */}
-                <div className='w-full'>
-                  <HoverImage quote={card.message}>
-                    <div className='flex items-center justify-center gap-4'>
-                      <Avatar className={'size-15'}>
-                        <AvatarImage src={card.image} />
-                      </Avatar>
-                      <div className='flex flex-col'>
-                        <span className='font-semibold'>{card.name}</span>
-                        <span className='text-muted-foreground text-xs'>{card.address}</span>
-                      </div>
+                <HoverImage message={card.message}>
+                  <div className='mt-3 flex items-center justify-center gap-4'>
+                    <Avatar className={'size-15'}>
+                      <AvatarImage src={card.image} />
+                    </Avatar>
+                    <div className='flex flex-col'>
+                      <span className='font-semibold'>{card.name}</span>
+                      <span className='text-muted-foreground text-left text-xs'>
+                        {card.address}
+                      </span>
                     </div>
-                  </HoverImage>
-                </div>
+                  </div>
+                </HoverImage>
               </motion.div>
             ))}
           </div>
