@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='bg-primary py-4'>
-        <p className='text-center text-sm text-white'>
+        <p className='text-center text-xs text-white sm:text-sm'>
           Copyright &copy; 2026 Croisania. All Rights Reserved
         </p>
       </div>

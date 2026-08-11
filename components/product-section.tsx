@@ -57,14 +57,14 @@ const ProductSection = () => {
             <motion.h5
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className='text-accent mb-2 text-sm font-semibold tracking-widest uppercase'>
               Produk Kami
             </motion.h5>
             <motion.h1
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
               className='text-primary font-heading mb-6 text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl'>
               Kroisan yang Akan Anda Cintai
             </motion.h1>
@@ -88,7 +88,7 @@ const ProductSection = () => {
               <Button
                 size={'lg'}
                 className='bg-primary active:ring-primary h-12 rounded-full px-8 text-white active:ring-2 active:ring-offset-2'>
-                Pesan Sekarang
+                Lihat Semua Produk
                 <FaArrowRight className='ml-2' />
               </Button>
             </motion.div>
@@ -98,7 +98,7 @@ const ProductSection = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className='w-full lg:flex-1'>
             <div className='grid grid-cols-2 gap-4 lg:h-137.5 lg:grid-cols-3 lg:grid-rows-2'>
               {products.map((product, index) => (

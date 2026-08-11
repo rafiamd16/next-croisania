@@ -15,7 +15,7 @@ const HeroSection = () => {
   return (
     <section
       id='home'
-      className={`relative min-h-screen bg-[url(/assets/hero.webp)] bg-cover bg-center pt-36 pb-16 sm:pt-44 lg:pb-80`}>
+      className={`relative min-h-screen bg-[url(/assets/hero.webp)] bg-cover bg-center pt-32 pb-16 sm:pt-44 lg:pb-80`}>
       {/* overlay */}
       <div className='absolute top-0 right-0 left-0 z-10 block h-full w-full bg-neutral-50/25 sm:hidden'></div>
       <div className='relative z-20 container mx-auto px-4'>
@@ -23,7 +23,7 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className='mb-4'>
             <Badge className='bg-cream text-accent py-3 font-semibold'>
               <FaLeaf />
@@ -33,8 +33,8 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}>
-            <h1 className='font-heading w-full text-4xl leading-tight font-bold text-shadow-2xs sm:text-5xl lg:w-1/2 xl:text-7xl'>
+            transition={{ duration: 0.5, delay: 0.4 }}>
+            <h1 className='font-heading w-full text-4xl leading-tight font-bold text-shadow-2xs sm:text-5xl lg:w-1/2 xl:text-6xl'>
               <span>Kroisan Premium,</span>
               <span className='text-primary block'>Renyah di Luar,</span>
               <span className='text-primary block'>Lembut di Dalam.</span>
@@ -43,7 +43,7 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}>
+            transition={{ duration: 0.5, delay: 0.6 }}>
             <p className='p-shadow mt-4 max-w-96 leading-relaxed'>
               Dibuat dari bahan pilihan terbaik dengan mentega asli, tanpa pengawet, dan selalu
               segar setiap hari untuk momen istimewa anda.
@@ -53,7 +53,7 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}>
+              transition={{ duration: 0.5, delay: 0.8 }}>
               <Button size={'lg'} className='h-13 w-max px-8 shadow-md lg:w-auto'>
                 Pesan Sekarang
                 <ArrowRight />
@@ -62,7 +62,7 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
+              transition={{ duration: 0.5, delay: 1 }}
               className='flex items-center'>
               <div className='rounded-full bg-white p-0.5'>
                 <Image
@@ -100,7 +100,7 @@ const HeroSection = () => {
                   className='size-8 rounded-full object-cover'
                 />
               </div>
-              <span className='p-shadow -translate-x-10 text-sm md:text-base'>
+              <span className='p-shadow text-primary -translate-x-10 text-sm md:text-base'>
                 5000+ Pelanggan Puas
               </span>
             </motion.div>

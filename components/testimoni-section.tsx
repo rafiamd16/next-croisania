@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { FaStar } from 'react-icons/fa'
 import wowo1 from '@/public/assets/testimonials/wowo-1.jpg'
 import owi from '@/public/assets/testimonials/owi-1.jpg'
-import lilbah from '@/public/assets/testimonials/lilbah.jpg'
+import gibran from '@/public/assets/testimonials/gibran.jpg'
 import HoverImage from '@/components/hover-image'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 
@@ -16,7 +16,7 @@ const testimonials = [
       'Kroisannya enak banget! Renyah di luar, lembut di dalam. Rasa butter-nya juara! Pasti repeat order lagi.',
     address: 'Jakarta',
     rate: <FaStar className='text-yellow-400' />,
-    message: 'Hei antek-antek asing',
+    message: 'Hidup Jokowiiii!',
   },
   {
     name: 'Pria Solo',
@@ -24,34 +24,34 @@ const testimonials = [
     quote: 'Pengiriman cepat dan selalu fresh. Cocok banget buat sarapan keluarga setiap hari.',
     address: 'Solo',
     rate: <FaStar className='text-yellow-400' />,
-    message: 'Saya akan lawan',
+    message: 'Saya akan lawan!',
   },
   {
-    name: 'Lilbah',
-    image: lilbah.src,
+    name: 'Gibran',
+    image: gibran.src,
     quote: 'Varian rasanya banyak dan semuanya enak. Anak-anak juga suka banget!',
-    address: 'Maluku',
+    address: 'Solo',
     rate: <FaStar className='text-yellow-400' />,
-    message: 'MBG, mas bahlil ganteng',
+    message: 'Akan terbuka 19 juta lapangan pekerjaan!',
   },
 ]
 
 const TestimoniSection = () => {
   return (
-    <section id='testimoni' className='py-26'>
+    <section id='testimoni' className='bg-cream py-26'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col items-center justify-center'>
           <motion.h5
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className='text-accent mb-2 text-sm font-semibold tracking-widest uppercase'>
             testimoni
           </motion.h5>
           <motion.h1
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             className='text-primary font-heading mb-10 text-center text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl'>
             Apa Kata Beliau?
           </motion.h1>

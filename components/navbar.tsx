@@ -13,8 +13,8 @@ const navItems = [
   { href: '#product', label: 'Produk' },
   { href: '#about', label: 'Tentang Kami' },
   { href: '#testimoni', label: 'Testimoni' },
-  { href: '#faq', label: 'FAQ' },
   { href: '#contact', label: 'Kontak' },
+  { href: '#faq', label: 'FAQ' },
 ]
 
 const Navbar = () => {
