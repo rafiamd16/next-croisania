@@ -118,7 +118,7 @@ const ProductSection = () => {
         </div>
 
         {/* Penawaran */}
-        <div className='mt-24 flex flex-col-reverse gap-4 lg:flex-row'>
+        <div className='mt-24 flex flex-col-reverse gap-5 lg:flex-row'>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
