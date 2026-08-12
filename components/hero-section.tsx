@@ -100,7 +100,7 @@ const HeroSection = () => {
                   className='size-8 rounded-full object-cover'
                 />
               </div>
-              <span className='p-shadow text-primary -translate-x-10 text-sm md:text-base'>
+              <span className='p-shadow text-primary -translate-x-10 text-sm font-semibold md:text-base'>
                 5000+ Pelanggan Puas
               </span>
             </motion.div>

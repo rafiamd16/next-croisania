@@ -32,7 +32,7 @@ const filosophy = [
 
 const AboutSection = () => {
   return (
-    <section id='about' className='py-26'>
+    <section id='about' className='bg-cream py-26'>
       <div className='container mx-auto'>
         <div className='flex flex-wrap'>
           <div className='w-full px-4 lg:w-1/2'>

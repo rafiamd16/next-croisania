@@ -36,11 +36,11 @@ const benefits = [
 
 const BenefitSection = () => {
   return (
-    <section id='benefit' className='py-26'>
-      <div className='container mx-auto px-4'>
+    <section className='relative pt-26 pb-230 sm:pb-240 md:pb-120 lg:pb-110 xl:pb-0'>
+      <div className='absolute -top-30 right-0 left-0 z-30 container mx-auto px-4 sm:-top-15 lg:-top-30'>
         {/* benefits */}
         <div className='flex flex-col items-center justify-center'>
-          <motion.h5
+          {/* <motion.h5
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -53,8 +53,8 @@ const BenefitSection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className='text-primary font-heading mb-10 text-center text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl'>
             Keunggulan Produk Kami
-          </motion.h1>
-          <div className='relative z-30 grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5'>
+          </motion.h1> */}
+          <div className='grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5'>
             {benefits.map((card, index) => (
               <motion.div
                 initial={{ opacity: 0, y: 100 }}

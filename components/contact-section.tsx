@@ -9,7 +9,7 @@ import { IoMail, IoPerson } from 'react-icons/io5'
 
 const ContactSection = () => {
   return (
-    <section id='contact' className='py-26'>
+    <section id='contact' className='bg-cream py-26'>
       <div className='container mx-auto'>
         <motion.h5
           initial={{ opacity: 0, y: -100 }}

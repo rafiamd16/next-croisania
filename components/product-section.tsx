@@ -12,7 +12,6 @@ const products = [
   {
     src: '/assets/products/product-1.webp',
     alt: 'Croissant premium',
-    // Tall image on the left (Desktop), normal square on mobile
     className: 'col-span-1 lg:row-span-2 h-64 lg:h-full',
   },
   {
@@ -50,7 +49,7 @@ const features2 = [
 
 const ProductSection = () => {
   return (
-    <section id='product' className='bg-cream py-26'>
+    <section id='product' className='py-26'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col items-center gap-12 lg:flex-row lg:gap-16'>
           <div className='w-full lg:w-2/5'>
@@ -73,7 +72,7 @@ const ProductSection = () => {
                 <motion.li
                   initial={{ opacity: 0, x: -100 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 * index }}
+                  transition={{ duration: 0.5, delay: 0.6 * index }}
                   key={index}
                   className='flex items-center gap-3'>
                   <CircleCheck className='text-accent h-6 w-6 shrink-0' />
@@ -84,7 +83,7 @@ const ProductSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}>
+              transition={{ duration: 0.5, delay: 0.8 }}>
               <Button
                 size={'lg'}
                 className='bg-primary active:ring-primary h-12 rounded-full px-8 text-white active:ring-2 active:ring-offset-2'>
@@ -101,9 +100,9 @@ const ProductSection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className='w-full lg:flex-1'>
             <div className='grid grid-cols-2 gap-4 lg:h-137.5 lg:grid-cols-3 lg:grid-rows-2'>
-              {products.map((product, index) => (
+              {products.map((product) => (
                 <div
-                  key={index}
+                  key={product.alt}
                   className={`group relative overflow-hidden rounded-2xl ${product.className}`}>
                   <Image
                     src={product.src}
@@ -161,7 +160,7 @@ const ProductSection = () => {
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className='mb-5 flex max-w-md items-center justify-center gap-4 rounded-xl bg-white p-4'>
+              className='bg-cream mb-5 flex max-w-md items-center justify-center gap-4 rounded-xl p-4'>
               <span className='text-primary text-xs font-semibold line-through sm:text-sm'>
                 Rp. 75.000
               </span>
@@ -172,12 +171,12 @@ const ProductSection = () => {
             </motion.div>
 
             <ul className='mb-8 space-y-4'>
-              {features2.map((feature, index) => (
+              {features2.map((feature) => (
                 <motion.li
                   initial={{ opacity: 0, x: -100 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 * index }}
-                  key={index}
+                  transition={{ duration: 0.5, delay: 0.8 * features2.indexOf(feature) }}
+                  key={feature}
                   className='flex items-center gap-3'>
                   <CircleCheck className='text-accent h-6 w-6 shrink-0' />
                   <span className='text-primary text-base font-medium'>{feature}</span>
@@ -185,28 +184,23 @@ const ProductSection = () => {
               ))}
             </ul>
 
-            <div className='flex flex-col gap-5 sm:flex-row'>
-              <motion.div
-                initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}>
-                <Button size={'lg'} className='h-13 w-max px-8 shadow-md lg:w-auto'>
-                  Pesan Sekarang
-                  <ArrowRight />
-                </Button>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className='flex items-center gap-4'>
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+              className='flex flex-col gap-5 sm:flex-row'>
+              <Button size={'lg'} className='h-13 w-max px-8 shadow-md lg:w-auto'>
+                Pesan Sekarang
+                <ArrowRight />
+              </Button>
+              <div className='flex items-center gap-4'>
                 <IoShieldCheckmark size={46} className='text-accent' />
                 <span className='text-sm'>
                   <span className='text-primary text-base'>Garansi Uang Kembali</span> <br />
                   jika tidak puas
                 </span>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
