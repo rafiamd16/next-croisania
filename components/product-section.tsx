@@ -165,7 +165,7 @@ const ProductSection = () => {
                 Rp. 75.000
               </span>
               <h1 className='font-heading text-lg font-bold sm:text-4xl'>Rp. 50.000</h1>
-              <span className='bg-cream text-accent rounded-full px-2 py-1 text-xs font-semibold uppercase sm:text-sm'>
+              <span className='bg-accent/30 text-primary rounded-full px-2 py-1 text-xs font-semibold uppercase sm:text-sm'>
                 hemat 27%
               </span>
             </motion.div>

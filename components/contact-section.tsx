@@ -48,7 +48,7 @@ const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
             className='mt-8 w-full px-4 lg:mt-0 lg:w-1/2'>
             <div className='h-full rounded-xl border bg-white p-6 lg:p-8'>
-              <h2 className='text-primary font-heading mb-5 text-lg font-semibold md:text-3xl'>
+              <h2 className='text-primary font-heading font-semi-bold mb-5 text-lg md:text-3xl'>
                 Kirim Pesan
               </h2>
               <form className='space-y-4'>
