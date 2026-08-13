@@ -36,7 +36,7 @@ const benefits = [
 
 const BenefitSection = () => {
   return (
-    <section className='relative pt-26 pb-230 sm:pb-240 md:pb-120 lg:pb-110 xl:pb-0'>
+    <section className='bg-cream relative pt-26 pb-230 sm:pb-240 md:pb-120 lg:pb-110 xl:pb-0'>
       <div className='absolute -top-30 right-0 left-0 z-30 container mx-auto px-4 sm:-top-15 lg:-top-30'>
         {/* benefits */}
         <div className='flex flex-col items-center justify-center'>

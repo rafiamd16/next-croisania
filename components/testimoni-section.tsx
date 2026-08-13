@@ -38,7 +38,7 @@ const testimonials = [
 
 const TestimoniSection = () => {
   return (
-    <section id='testimoni' className='py-26'>
+    <section id='testimoni' className='bg-cream py-26'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col items-center justify-center'>
           <motion.h5

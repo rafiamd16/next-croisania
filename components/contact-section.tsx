@@ -9,7 +9,7 @@ import { IoMail, IoPerson } from 'react-icons/io5'
 
 const ContactSection = () => {
   return (
-    <section id='contact' className='bg-cream py-26'>
+    <section id='contact' className='bg-white py-26'>
       <div className='container mx-auto'>
         <motion.h5
           initial={{ opacity: 0, y: -100 }}
@@ -47,7 +47,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             className='mt-8 w-full px-4 lg:mt-0 lg:w-1/2'>
-            <div className='h-full rounded-xl border bg-white p-6 lg:p-8'>
+            <div className='h-full rounded-xl border bg-white p-6 shadow-md lg:p-8'>
               <h2 className='text-primary font-heading font-semi-bold mb-5 text-lg md:text-3xl'>
                 Kirim Pesan
               </h2>

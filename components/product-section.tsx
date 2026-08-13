@@ -49,7 +49,7 @@ const features2 = [
 
 const ProductSection = () => {
   return (
-    <section id='product' className='py-26'>
+    <section id='product' className='bg-cream py-26'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col items-center gap-12 lg:flex-row lg:gap-16'>
           <div className='w-full lg:w-2/5'>
@@ -160,12 +160,12 @@ const ProductSection = () => {
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className='bg-cream mb-5 flex max-w-md items-center justify-center gap-4 rounded-xl p-4'>
+              className='mb-5 flex max-w-md items-center justify-center gap-4 rounded-xl bg-white p-4'>
               <span className='text-primary text-xs font-semibold line-through sm:text-sm'>
                 Rp. 75.000
               </span>
               <h1 className='font-heading text-lg font-bold sm:text-4xl'>Rp. 50.000</h1>
-              <span className='bg-accent/30 text-primary rounded-full px-2 py-1 text-xs font-semibold uppercase sm:text-sm'>
+              <span className='bg-cream text-accent rounded-full px-3 py-1 text-xs font-semibold uppercase sm:text-sm'>
                 hemat 27%
               </span>
             </motion.div>

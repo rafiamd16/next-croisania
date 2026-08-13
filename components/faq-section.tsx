@@ -43,7 +43,7 @@ const faqs = [
 
 const FaqSection = () => {
   return (
-    <section id='faq' className='py-26'>
+    <section id='faq' className='bg-white py-26'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col items-center justify-center'>
           <motion.h5

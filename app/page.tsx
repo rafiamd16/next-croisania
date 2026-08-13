@@ -14,8 +14,8 @@ const HomePage = () => {
       <ProductSection />
       <AboutSection />
       <TestimoniSection />
-      <ContactSection />
       <FaqSection />
+      <ContactSection />
     </>
   )
 }
