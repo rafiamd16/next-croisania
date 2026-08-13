@@ -47,7 +47,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             className='mt-8 w-full px-4 lg:mt-0 lg:w-1/2'>
-            <div className='h-full rounded-md'>
+            <div className='h-full rounded-xl border bg-white p-6 lg:p-8'>
               <h2 className='text-primary font-heading mb-5 text-lg font-medium md:text-3xl'>
                 Kirim Pesan
               </h2>
