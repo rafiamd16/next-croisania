@@ -19,7 +19,7 @@ const testimonials = [
     message: 'Hidup Jokowiiii!',
   },
   {
-    name: 'Pria Solo',
+    name: 'Kaiwi',
     image: owi.src,
     quote: 'Pengiriman cepat dan selalu fresh. Cocok banget buat sarapan keluarga setiap hari.',
     address: 'Solo',
@@ -27,7 +27,7 @@ const testimonials = [
     message: 'Saya akan lawan!',
   },
   {
-    name: 'Gibran',
+    name: 'Fufufafa',
     image: gibran.src,
     quote: 'Varian rasanya banyak dan semuanya enak. Anak-anak juga suka banget!',
     address: 'Solo',
@@ -63,7 +63,7 @@ const TestimoniSection = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 * testimonials.indexOf(card) }}
                 key={card.name}
-                className={`flex flex-col rounded-xl border bg-white px-8 py-8 shadow-md transition duration-500 ease-in-out hover:-translate-y-1 hover:shadow-[10px_10px_5px_rgba(0,0,0,0.8)] ${card.name === 'Gibran' ? 'col-span-1 md:col-span-2 xl:col-span-1' : ''} `}>
+                className={`flex flex-col rounded-xl border bg-white px-8 py-8 shadow-md transition duration-500 ease-in-out hover:-translate-y-1 hover:shadow-[10px_10px_5px_rgba(0,0,0,0.8)] ${card.name === 'Fufufafa' ? 'col-span-1 md:col-span-2 xl:col-span-1' : ''} `}>
                 <div className='mb-5 flex flex-1 flex-col items-center gap-5'>
                   {/* rate */}
                   <div className='flex items-center gap-1'>
