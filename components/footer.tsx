@@ -108,7 +108,7 @@ const Footer = () => {
                   <FaLinkedinIn className='text-white' size={22} />
                 </a>
                 <a
-                  href='https://github.com/rafiamd16'
+                  href='https://github.com/rafiamd16/next-croisania'
                   target='_blank'
                   className='bg-primary rounded-full p-1.5'>
                   <FaGithub className='text-white' size={22} />
