@@ -72,7 +72,7 @@ const ProductSection = () => {
                 <motion.li
                   initial={{ opacity: 0, x: -100 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 * index }}
+                  transition={{ duration: 0.5, delay: 0.5 * index }}
                   key={index}
                   className='flex items-center gap-3'>
                   <CircleCheck className='text-accent h-6 w-6 shrink-0' />
@@ -175,7 +175,7 @@ const ProductSection = () => {
                 <motion.li
                   initial={{ opacity: 0, x: -100 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 * features2.indexOf(feature) }}
+                  transition={{ duration: 0.5, delay: 0.5 * features2.indexOf(feature) }}
                   key={feature}
                   className='flex items-center gap-3'>
                   <CircleCheck className='text-accent h-6 w-6 shrink-0' />
