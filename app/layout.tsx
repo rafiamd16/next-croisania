@@ -22,8 +22,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Croisania',
-  description: 'Freshly Baked Everyday',
+  title: 'Croisania | Freshly Baked Everyday',
+  description: 'Croissant artisan yang dipanggang segar setiap hari.',
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
