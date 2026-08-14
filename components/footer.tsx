@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import logo from '@/public/assets/logo.png'
-import { FaGithub, FaInstagram, FaLinkedinIn, FaPhoneAlt } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 import { IoLocation, IoMail } from 'react-icons/io5'
 
 const Footer = () => {
@@ -92,7 +92,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className='mb-12 w-full px-4 lg:w-1/4'>
+            <div className='mb-12 w-full border px-4 py-4 sm:border-0 sm:py-4 lg:w-1/4'>
               <h3 className='text-primary mb-5 text-center font-bold sm:text-left'>Follow Kami</h3>
               <div className='mb-8 flex items-center justify-center gap-4 sm:justify-start'>
                 <a
@@ -112,6 +112,9 @@ const Footer = () => {
                   target='_blank'
                   className='bg-primary rounded-full p-1.5'>
                   <FaGithub className='text-white' size={22} />
+                </a>
+                <a href='#' target='_blank' className='bg-primary rounded-full p-1.5'>
+                  <FaWhatsapp className='text-white' size={22} />
                 </a>
               </div>
               <div className='mx-auto max-w-2xs rounded-lg border bg-white p-4 text-sm shadow-sm sm:mx-0'>
